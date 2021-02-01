@@ -2,8 +2,16 @@ public class MyMain {
     // This method adds up the values of all digits
     // in x, recursively
     public static int addDigits(int x) { 
-        // YOUR CODE HERE
-        return -1;
+        int sum = 0;
+        if(x == 0){
+            return 0;
+        }
+        else{
+            sum = sum + (x%10);
+            x = addDigits(x/10);
+            sum = sum + x;
+        }
+        return sum;
     }
 
 
@@ -30,7 +38,8 @@ public class MyMain {
     }
 
     public static void main(String[] args) {
-        System.out.println("True case (Palindrome): " + isPalindrome("racecar"));
-        System.out.println("False case (Palindrome): " + isPalindrome("running"));
+        //System.out.println("True case (Palindrome): " + isPalindrome("racecar"));
+        //System.out.println("False case (Palindrome): " + isPalindrome("running"));
+        System.out.println("Sum digits: " + addDigits(39));
     }
 }
