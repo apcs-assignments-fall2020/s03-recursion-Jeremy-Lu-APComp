@@ -33,13 +33,19 @@ public class MyMain {
     // This method returns the orignal string reversed;
     // this method should be written using recursion
     public static String reverse(String str) { 
-        // YOUR CODE HERE
-        return "";
+        if(str.length()<=1){
+            return str;
+        }
+        else{
+            String reversed = reverse(str.substring(1, str.length())) + str.charAt(0);
+            return reversed;
+        }
     }
 
     public static void main(String[] args) {
         //System.out.println("True case (Palindrome): " + isPalindrome("racecar"));
         //System.out.println("False case (Palindrome): " + isPalindrome("running"));
         System.out.println("Sum digits: " + addDigits(39));
+        System.out.println("Reverse: " + reverse("String"));
     }
 }
