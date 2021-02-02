@@ -2,16 +2,16 @@ public class MyMain {
     // This method adds up the values of all digits
     // in x, recursively
     public static int addDigits(int x) { 
-        int sum = 0;
+        int sol = 0;
         if(x == 0){
             return 0;
         }
         else{
-            sum = sum + (x%10);
+            sol = sol + (x%10);
             x = addDigits(x/10);
-            sum = sum + x;
+            sol = sol + x;
         }
-        return sum;
+        return sol;
     }
 
 
