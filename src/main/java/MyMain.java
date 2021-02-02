@@ -18,7 +18,7 @@ public class MyMain {
     // This method checks if a String is a palindrome
     // (e.g. "racecar", "madam"), recursively
     public static boolean isPalindrome(String str) { 
-        if(str.length() == 0){
+        if(str.length() == 0 || str.length() == 1){
             return true;
         }
         else if(str.charAt(0) == str.charAt(str.length()-1)){
@@ -43,8 +43,8 @@ public class MyMain {
     }
 
     public static void main(String[] args) {
-        //System.out.println("True case (Palindrome): " + isPalindrome("racecar"));
-        //System.out.println("False case (Palindrome): " + isPalindrome("running"));
+        System.out.println("True case (Palindrome): " + isPalindrome("racecar"));
+        System.out.println("False case (Palindrome): " + isPalindrome("running"));
         System.out.println("Sum digits: " + addDigits(39));
         System.out.println("Reverse: " + reverse("String"));
     }
